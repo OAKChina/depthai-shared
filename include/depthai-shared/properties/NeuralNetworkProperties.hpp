@@ -18,6 +18,14 @@ struct NeuralNetworkProperties : PropertiesSerializable<Properties, NeuralNetwor
      */
     std::string blobUri;
     /**
+     * Uri which points to the xml model description
+     */
+    std::string xmlUri;
+    /**
+     * Uri which points to the bin model description
+     */
+    std::string binUri;
+    /**
      * Number of available output tensors in pool
      */
     std::uint32_t numFrames = 8;
@@ -31,6 +39,6 @@ struct NeuralNetworkProperties : PropertiesSerializable<Properties, NeuralNetwor
     std::uint32_t numNCEPerThread = 0;
 };
 
-DEPTHAI_SERIALIZE_EXT(NeuralNetworkProperties, blobSize, blobUri, numFrames, numThreads, numNCEPerThread);
+DEPTHAI_SERIALIZE_EXT(NeuralNetworkProperties, xmlUri, binUri, blobSize, blobUri, numFrames, numThreads, numNCEPerThread);
 
 }  // namespace dai
