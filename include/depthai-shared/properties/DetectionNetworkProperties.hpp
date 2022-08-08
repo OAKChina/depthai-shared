@@ -17,6 +17,6 @@ struct DetectionNetworkProperties : PropertiesSerializable<NeuralNetworkProperti
     DetectionParserOptions parser;
 };
 
-DEPTHAI_SERIALIZE_EXT(DetectionNetworkProperties, blobSize, blobUri, numFrames, numThreads, numNCEPerThread, parser);
+DEPTHAI_SERIALIZE_EXT(DetectionNetworkProperties, xmlUri, binUri, blobSize, blobUri, numFrames, numThreads, numNCEPerThread, parser);
 
 }  // namespace dai
